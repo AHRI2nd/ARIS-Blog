@@ -1,8 +1,8 @@
 ---
 title: "블로그 주소 변경 안내"
 published: 2026-06-09
-description: "AHRI2nd.github.io에서 ahri2nd.xyz로 이전했습니다"
-tags: [공지]
+description: "AHRI2nd.github.io 비활성화"
+tags: [Notice]
 category: Notice
 lang: ko
 ---
