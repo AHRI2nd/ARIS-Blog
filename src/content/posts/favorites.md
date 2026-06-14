@@ -99,14 +99,106 @@ category: Music
 
 ### Youtube - 好きな歌ってみた - Liked Cover Songs
 
-<div class="youtube-section">
-  <div class="video-wrapper">
-    <iframe src="https://www.youtube-nocookie.com/embed/videoseries?si=LtdBQyCiawthfL-z&amp;list=PLI8v8TR0VO8l0CoLeN6S5h98gXB3hsOyp"
-            title="YouTube video player"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerpolicy="strict-origin-when-cross-origin"
-            allowfullscreen>
-    </iframe>
-  </div>
+<style>
+  .yt-playlist {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 12px;
+    margin: 16px 0;
+  }
+  .yt-card {
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    overflow: hidden;
+    background: var(--card-bg, #1e1e2e);
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.15s, box-shadow 0.15s;
+  }
+  .yt-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 16px rgba(0,0,0,0.3);
+  }
+  .yt-thumb {
+    width: 100%;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+  }
+  .yt-info {
+    padding: 8px 10px 10px;
+  }
+  .yt-title {
+    font-size: 0.82rem;
+    line-height: 1.4;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  .yt-loading, .yt-error {
+    font-size: 0.85rem;
+    opacity: 0.6;
+    padding: 8px 0;
+  }
+  .yt-playlist-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 0.9rem;
+    margin: 4px 0 4px;
+  }
+</style>
+
+<p class="yt-playlist-link">
+  <a href="https://www.youtube.com/playlist?list=PLI8v8TR0VO8l0CoLeN6S5h98gXB3hsOyp" target="_blank" rel="noopener noreferrer">▶ View Full Playlist →</a>
+</p>
+
+<div id="yt-playlist-container">
+  <p class="yt-loading">플레이리스트 불러오는 중...</p>
 </div>
+
+<script>
+(function() {
+  const container = document.getElementById('yt-playlist-container');
+
+  fetch('/api/youtube-playlist.json')
+    .then(r => r.json())
+    .then(data => {
+      const playlistId = data.playlistId;
+      const videos = data.videos || [];
+      if (!videos.length) {
+        container.innerHTML = '<p class="yt-error">영상을 불러올 수 없습니다.</p>';
+        return;
+      }
+      const grid = document.createElement('div');
+      grid.className = 'yt-playlist';
+      videos.slice(0, 6).forEach(v => {
+        const a = document.createElement('a');
+        a.className = 'yt-card';
+        a.href = `https://www.youtube.com/watch?v=${v.videoId}&list=${playlistId}`;
+        a.target = '_blank';
+        a.rel = 'noopener noreferrer';
+        const img = document.createElement('img');
+        img.className = 'yt-thumb';
+        img.src = v.thumbnail;
+        img.alt = '';
+        img.loading = 'lazy';
+        const info = document.createElement('div');
+        info.className = 'yt-info';
+        const title = document.createElement('p');
+        title.className = 'yt-title';
+        title.textContent = v.title;
+        info.appendChild(title);
+        a.appendChild(img);
+        a.appendChild(info);
+        grid.appendChild(a);
+      });
+      container.innerHTML = '';
+      container.appendChild(grid);
+    })
+    .catch(() => {
+      container.innerHTML = '<p class="yt-error">플레이리스트를 불러오지 못했습니다.</p>';
+    });
+})();
+</script>
