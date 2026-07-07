@@ -1,0 +1,21 @@
+# Cloudflare Pages security headers
+# Docs: https://developers.cloudflare.com/pages/configuration/headers/
+
+/*
+  # MIME 스니핑 차단
+  X-Content-Type-Options: nosniff
+  # 다른 사이트가 이 사이트를 iframe으로 감싸는 것(클릭재킹) 차단
+  X-Frame-Options: SAMEORIGIN
+  # 외부로 나갈 때 경로/쿼리 리퍼러 유출 최소화
+  Referrer-Policy: strict-origin-when-cross-origin
+  # 쓰지 않는 강력 권한 비활성화 (임베드가 쓰는 fullscreen/autoplay/gyroscope 등은 건드리지 않음)
+  Permissions-Policy: camera=(), microphone=(), geolocation=(), payment=(), usb=()
+  # HTTPS 강제 (2년). 하위 도메인까지 강제하려면 includeSubDomains 추가 — 모든 서브도메인 HTTPS 확인 후에만.
+  Strict-Transport-Security: max-age=63072000
+  # 팝업 기반 로그인(Giscus)은 유지하면서 창 간 격리
+  Cross-Origin-Opener-Policy: same-origin-allow-popups
+
+  # ─── CSP: 우선 Report-Only(차단 안 함, 위반만 관찰) ───
+  # DevTools 콘솔에서 위반이 없는 것을 확인한 뒤, 헤더 이름을
+  # Content-Security-Policy 로 바꿔 강제 적용하세요.
+  Content-Security-Policy-Report-Only: default-src 'self'; script-src 'self' 'unsafe-inline' https://giscus.app; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; frame-src https://giscus.app https://www.youtube-nocookie.com https://www.youtube.com https://open.spotify.com; connect-src 'self' https://api.github.com; frame-ancestors 'self'; base-uri 'self'; form-action 'self'
