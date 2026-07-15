@@ -3,7 +3,7 @@ title: "Lyrical Sync"
 published: 2026-03-07
 description: "LRC 가사 동기화 데스크탑 앱 개발 배경과 프로그램 소개"
 tags: [Lyrical Sync, LRC]
-category: Dev, Lyrical Sync
+category: Lyrical Sync
 lang: ko
 ---
 
