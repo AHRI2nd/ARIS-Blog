@@ -13,7 +13,7 @@ unlisted:
 lang: ja
 ---
 
-🌐 [한국어](/posts/privacy-policy/) · [English](/posts/privacy-policy-en/) · **日本語**
+🌐 [한국어](/posts/anitime-privacy-policy/) · [English](/posts/anitime-privacy-policy-en/) · **日本語**
 
 ---
 
