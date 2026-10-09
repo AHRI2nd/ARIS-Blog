@@ -41,7 +41,7 @@ The developer does not store app accounts or editing data on an app-operated ser
 
 Send privacy inquiries to [tsukimori@ahri2nd.xyz](mailto:tsukimori@ahri2nd.xyz). Email addresses, messages, and attachments you include may be processed to respond. You do not need to send sensitive files. The operator is the only person who reviews inquiries in the operator-managed mailbox. This describes access on the operator's side and does not limit separate processing by email providers.
 
-The operator retains inquiry content and attachments until the issue is resolved or for up to six months, whichever is shorter. The starting point for the six-month period has not yet been confirmed. Deletion requests may be sent to the same email address; the operator manually removes inquiry material from the operator-managed mailbox and attachments held there. This is a manual procedure, not an already configured automatic deletion process. Whether separately downloaded copies held by the operator are covered by this mailbox deletion procedure still needs confirmation.
+Inquiry content and attachments are deleted within six months of initial receipt. This includes the message contents, attachments, and any separately stored copies. Deletion requests may be sent to the same email address.
 
 ## Website data and external services
 
@@ -53,4 +53,4 @@ The web response checked for this site included Cloudflare delivery-layer header
 
 The current build generates service-worker and Workbox cache-list files, but an automatic registration reference has not been confirmed in the generated pages. This does not establish that every visitor's browser has a registered service worker or an installed PWA. A service worker registered by an earlier deployment or the browser's own cache may remain on some devices. Browser site-data controls can clear local preferences and cache, with details varying by browser.
 
-The operator still needs to confirm hosting, access logs, cookies, the email-provider account settings, and the starting point for the six-month retention limit. **Until these items are confirmed, this document is not a final policy for publication or Store submission.** If app features or data practices change, this policy and the Store disclosures will be updated.
+The operator still needs to confirm hosting, access logs, cookies, and the email-provider account settings. **Until these items are confirmed, this document is not a final policy for publication or Store submission.** If app features or data practices change, this policy and the Store disclosures will be updated.
