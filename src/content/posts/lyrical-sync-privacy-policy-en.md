@@ -25,7 +25,7 @@ This policy applies to the **Lyrical Sync Store edition** for macOS and Windows 
 
 ## Information handled by the app and why
 
-The app processes audio and track information you select, along with lyrics, track metadata, and timestamps, on your device for playback and editing. Saving or exporting writes lyrics and information supported by the selected format to the file you choose. The app does not upload this data, file paths, or editing history to the developer's servers. No account is required. The app has no advertising, usage analytics, or remote error reporting.
+The app processes audio and track information you select, along with lyrics, track metadata, and timestamps, on your device for playback and editing. Saving or exporting writes lyrics and information supported by the selected format to the file you choose. The app does not upload this data, file paths, or editing history to the developer's servers. No account is required. The app itself has no advertising, usage analytics, or remote error reporting.
 
 ## Information stored on your device
 
@@ -41,11 +41,15 @@ Clear local data removes the recent-file list, saved security-scoped access book
 
 This action does not delete the original lyrics or audio files or your current editing content. References and access information for an open document remain in memory until you close it. Opening files or changing settings later may create related local records again.
 
-If a storage error prevents some data from being deleted or a setting from being saved, the app reports the error and offers a retry. These controls do not guarantee deletion of WebKit or operating-system caches or provider backups. You manage and delete files you save or export.
+If a storage error prevents some data from being deleted or a setting from being saved, the app reports the error and offers a retry. Clear local data does not delete WebView2 diagnostic files, operating-system caches, or information already sent to Microsoft. You manage and delete files you save or export.
 
 ## External sharing and protection
 
-The app itself does not upload or share local lyrics, audio, or editing data with the developer or external services. If you choose a cloud-synchronized folder, that separate synchronization service may process files according to its own settings. The app does not provide its own encryption; access to local data relies on operating-system account and file protections.
+The app itself does not upload original lyrics or audio files to the developer's servers and has no built-in usage analytics or remote error reporting. If you choose a cloud-synchronized folder, that separate synchronization service may process files according to its own settings.
+
+The Windows Store edition includes Microsoft WebView2 Runtime. Optional diagnostic data follows the Windows Diagnostic data setting; required diagnostic data may be collected regardless of that setting. Microsoft Defender SmartScreen is enabled by default and sends information to Microsoft. When a WebView2 process crashes, diagnostic minidump files are created and sent to Microsoft. See the [Microsoft Privacy Statement](https://privacy.microsoft.com/en-us/privacystatement) and [WebView2 data and privacy documentation](https://learn.microsoft.com/en-us/microsoft-edge/webview2/concepts/data-privacy) for details. This notice applies only to the Windows edition; the macOS edition uses WKWebView.
+
+The app does not provide its own encryption; access to local data relies on operating-system account and file protections.
 
 ## Inquiries and email handling
 
