@@ -43,7 +43,7 @@ The app itself does not upload or share local lyrics, audio, or editing data wit
 
 Send privacy inquiries to [tsukimori@ahri2nd.xyz](mailto:tsukimori@ahri2nd.xyz). The operator reviews the email address, message, and attachments you provide to respond and resolve the issue. You do not need to send sensitive files. Email service providers may separately process information while transmitting or storing it.
 
-The operator deletes inquiry content, attachments, and separately stored copies under the operator's control within six months of initial receipt. You may request deletion at the same email address. This period applies to operator-controlled records and does not mean the operator controls or can immediately delete separate processing by email service providers.
+Inquiry messages and attachments are deleted within six months of receipt. No separate copies are retained.
 
 ## Changes and contact
 
