@@ -27,7 +27,7 @@ This policy applies to the **Lyrical Sync Store edition** for macOS and Windows 
 
 ## Information handled by the app and why
 
-The app processes audio and track information you select, along with lyrics, track metadata, and timestamps, on your device for playback and editing. Saving or exporting writes them to the file you choose. The app does not upload this data, file paths, or editing history to the developer's servers. No account is required. The app has no advertising, usage analytics, or remote error reporting.
+The app processes audio and track information you select, along with lyrics, track metadata, and timestamps, on your device for playback and editing. Saving or exporting writes lyrics and information supported by the selected format to the file you choose. The app does not upload this data, file paths, or editing history to the developer's servers. No account is required. The app has no advertising, usage analytics, or remote error reporting.
 
 ## Information stored on your device
 
