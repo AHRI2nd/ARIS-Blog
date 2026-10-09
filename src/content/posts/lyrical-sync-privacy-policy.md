@@ -53,9 +53,9 @@ Windows Store edition에는 Microsoft WebView2 Runtime이 포함됩니다. Windo
 
 ## 문의 및 이메일 처리
 
-개인정보 관련 문의는 [tsukimori@ahri2nd.xyz](mailto:tsukimori@ahri2nd.xyz)로 보내 주세요. 문의는 운영자가 사용하는 Google Workspace 메일함으로 수신하며, 운영자 본인만 확인합니다. Resend는 운영자의 발신 이메일 전달에만 사용합니다.
+개인정보 관련 문의는 [tsukimori@ahri2nd.xyz](mailto:tsukimori@ahri2nd.xyz)로 보내 주세요.
 
-문의 내용과 첨부 파일은 최초 수신일부터 최대 6개월 이내에 삭제합니다. 운영자가 메일함에서 문의 메일과 첨부 파일을 수동으로 삭제하고 휴지통도 비우며, 별도 사본은 보관하지 않습니다.
+문의 내용과 첨부 파일은 최초 수신일부터 최대 6개월 이내에 삭제합니다.
 
 앱과 관련된 개인정보의 열람·정정·삭제·처리정지 요청은 위 이메일로 보내 주세요. 운영자가 요청을 확인하고 처리 방법과 결과를 회신합니다.
 

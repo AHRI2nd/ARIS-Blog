@@ -53,9 +53,9 @@ The app does not provide its own encryption; access to local data relies on oper
 
 ## Inquiries and email handling
 
-Send privacy inquiries to [tsukimori@ahri2nd.xyz](mailto:tsukimori@ahri2nd.xyz). Inquiries are received in the operator's Google Workspace mailbox, which only the operator reviews. Resend is used only to deliver email sent by the operator.
+Send privacy inquiries to [tsukimori@ahri2nd.xyz](mailto:tsukimori@ahri2nd.xyz).
 
-Inquiry messages and attachments are deleted within six months of initial receipt. The operator manually deletes the messages and attachments from the managed mailbox and empties its Trash. No separate copies are retained.
+Inquiry messages and attachments are deleted within six months of initial receipt.
 
 You may email the address above to access or correct your app-related personal information, request its deletion, or ask that its processing be restricted. The operator will review the request and reply with how it will be handled and the result.
 
