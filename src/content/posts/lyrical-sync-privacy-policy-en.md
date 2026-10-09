@@ -43,8 +43,6 @@ Send privacy inquiries to [tsukimori@ahri2nd.xyz](mailto:tsukimori@ahri2nd.xyz).
 
 The operator retains inquiry content and attachments until the issue is resolved or for up to six months, whichever is shorter. The starting point for the six-month period has not yet been confirmed. Deletion requests may be sent to the same email address; the operator manually removes inquiry material from the operator-managed mailbox and attachments held there. This is a manual procedure, not an already configured automatic deletion process. Whether separately downloaded copies held by the operator are covered by this mailbox deletion procedure still needs confirmation.
 
-Resend and Gmail are used for inquiry email. Provider-side processing is separate from the operator's mailbox retention and deletion procedure. [Resend's public security information](https://resend.com/security) states that email and log data are retained for 30 days on Free, Pro, and Scale plans. The actual plan and message route have not been verified, so we do not claim that this period applies to every inquiry. [Gmail Help](https://support.google.com/mail/answer/7401) says that normally deleted messages move to Trash and may remain there for up to 30 days, unless permanently deleted earlier. We do not promise that the operator immediately empties Trash or that provider-held copies are deleted immediately.
-
 ## Website data and external services
 
 This website stores display theme and hue preferences in browser `localStorage`. This is separate from local data in the Lyrical Sync desktop app and is not a cookie. You can clear it through your browser's site-data controls; details vary by browser.
