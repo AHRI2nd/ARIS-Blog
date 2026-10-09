@@ -13,8 +13,8 @@ function registerPrivacyCleanup() {
 	const swup = (window as unknown as {
 		swup?: {
 			hooks?: {
-				on: (
-					name: "visit:start",
+				before: (
+					name: "content:replace",
 					handler: (visit: { to: { url: string } }) => void,
 				) => () => void;
 			};

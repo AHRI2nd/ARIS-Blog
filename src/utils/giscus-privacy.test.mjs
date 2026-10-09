@@ -28,8 +28,8 @@ test("matches only the three Lyrical Sync privacy policy routes", () => {
 	assert.equal(isLyricalSyncPrivacySlug("lyrical-sync-intro"), false);
 });
 
-test("removes the current Giscus script and iframe before entering a policy route", () => {
-	let visitStart;
+test("removes the current Giscus script and iframe before replacing content with a policy route", () => {
+	let beforeContentReplace;
 	const removed = [];
 	const giscusElements = [
 		{ remove: () => removed.push("script") },
@@ -52,23 +52,23 @@ test("removes the current Giscus script and iframe before entering a policy rout
 	};
 	const swup = {
 		hooks: {
-			on: (name, handler) => {
-				assert.equal(name, "visit:start");
-				visitStart = handler;
+			before: (name, handler) => {
+				assert.equal(name, "content:replace");
+				beforeContentReplace = handler;
 				return () => {
-					visitStart = undefined;
+					beforeContentReplace = undefined;
 				};
 			},
 		},
 	};
 
 	const unregister = installGiscusPrivacyCleanup(swup, root);
-	visitStart({ to: { url: "/posts/lyrical-sync-intro/" } });
+	beforeContentReplace({ to: { url: "/posts/lyrical-sync-intro/" } });
 	assert.deepEqual(removed, []);
 
-	visitStart({ to: { url: "/posts/lyrical-sync-privacy-policy-en/" } });
+	beforeContentReplace({ to: { url: "/posts/lyrical-sync-privacy-policy-en/" } });
 	assert.deepEqual(removed, ["script", "iframe"]);
 
 	unregister();
-	assert.equal(visitStart, undefined);
+	assert.equal(beforeContentReplace, undefined);
 });

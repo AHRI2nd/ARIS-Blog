@@ -18,7 +18,7 @@ export function isLyricalSyncPrivacyPath(pathname) {
 }
 
 export function installGiscusPrivacyCleanup(swup, root = document) {
-	return swup.hooks.on("visit:start", (visit) => {
+	return swup.hooks.before("content:replace", (visit) => {
 		const target = new URL(visit.to.url, root.location.origin).pathname;
 		if (!isLyricalSyncPrivacyPath(target)) return;
 
