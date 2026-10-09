@@ -4,7 +4,7 @@ published: 2026-10-09
 description: "How the Lyrical Sync Store edition handles information and stores data on your device."
 tags: [Lyrical Sync, Privacy]
 category: Privacy
-draft: true
+draft: false
 unlisted:
   home: true
   archive: true
@@ -17,9 +17,7 @@ lang: en
 
 ---
 
-> **Draft under review.** The effective date will be set before publication.
-
-**Operator:** Tsukimori Ahri · **Privacy contact:** [tsukimori@ahri2nd.xyz](mailto:tsukimori@ahri2nd.xyz) · **Effective date:** To be confirmed before publication
+**Operator:** Tsukimori Ahri · **Privacy contact:** [tsukimori@ahri2nd.xyz](mailto:tsukimori@ahri2nd.xyz) · **Effective date:** 2026-10-09
 
 ## Scope
 

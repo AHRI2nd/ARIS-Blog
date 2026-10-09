@@ -4,7 +4,7 @@ published: 2026-10-09
 description: "Lyrical Sync Store editionの情報の取扱いと端末内の保存について説明します。"
 tags: [Lyrical Sync, Privacy]
 category: プライバシー
-draft: true
+draft: false
 unlisted:
   home: true
   archive: true
@@ -17,9 +17,7 @@ lang: ja
 
 ---
 
-> **確認中の草案です。** 施行日は公開前に確定します。
-
-**運営者:** Tsukimori Ahri · **プライバシーに関する連絡先:** [tsukimori@ahri2nd.xyz](mailto:tsukimori@ahri2nd.xyz) · **施行日:** 公開前に確定
+**運営者:** Tsukimori Ahri · **プライバシーに関する連絡先:** [tsukimori@ahri2nd.xyz](mailto:tsukimori@ahri2nd.xyz) · **施行日:** 2026-10-09
 
 ## 適用範囲
 
