@@ -37,10 +37,22 @@ You can clear recent-file entries from the recent files menu. A recovery copy is
 
 The developer does not store app accounts or editing data on an app-operated server. Operating systems, app Stores, and user-configured backup or synchronization services handle their data under their respective policies. Requests sent to an external lyrics service by an older version remain subject to that service's retention and deletion practices; installing the Store edition does not delete those records.
 
-## Contact and website processing
+## Inquiries and email handling
 
-For privacy questions, contact us at the email address above. Email addresses, messages, and attachments that you include may be processed to respond to your inquiry. You do not need to send sensitive files.
+Send privacy inquiries to [tsukimori@ahri2nd.xyz](mailto:tsukimori@ahri2nd.xyz). Email addresses, messages, and attachments you include may be processed to respond. You do not need to send sensitive files. The operator is the only person who reviews inquiries in the operator-managed mailbox. This describes access on the operator's side and does not limit separate processing by email providers.
 
-Resend and Gmail are used to process privacy inquiries by email. The specific receiving and forwarding route, who can access it, the retention period, and the process for deletion requests are still being confirmed. Details about this website's hosting provider, access logs, and cookie handling are also being confirmed. **Until these items are settled, this document is not a final policy for publication or Store submission.**
+The operator retains inquiry content and attachments until the issue is resolved or for up to six months, whichever is shorter. The starting point for the six-month period has not yet been confirmed. Deletion requests may be sent to the same email address; the operator manually removes inquiry material from the operator-managed mailbox and attachments held there. This is a manual procedure, not an already configured automatic deletion process. Whether separately downloaded copies held by the operator are covered by this mailbox deletion procedure still needs confirmation.
 
-If app features or data practices change, this policy and the Store disclosures will be updated.
+Resend and Gmail are used for inquiry email. Provider-side processing is separate from the operator's mailbox retention and deletion procedure. [Resend's public security information](https://resend.com/security) states that email and log data are retained for 30 days on Free, Pro, and Scale plans. The actual plan and message route have not been verified, so we do not claim that this period applies to every inquiry. [Gmail Help](https://support.google.com/mail/answer/7401) says that normally deleted messages move to Trash and may remain there for up to 30 days, unless permanently deleted earlier. We do not promise that the operator immediately empties Trash or that provider-held copies are deleted immediately.
+
+## Website data and external services
+
+This website stores display theme and hue preferences in browser `localStorage`. This is separate from local data in the Lyrical Sync desktop app and is not a cookie. You can clear it through your browser's site-data controls; details vary by browser.
+
+Other blog posts that show comments load a script and embedded frame from [Giscus](https://giscus.app/), which uses GitHub Discussions. These three privacy policy pages do not load the comments widget. If you navigate here from a post with comments, the browser may already have connected to Giscus while that earlier page was open; the widget and frame are removed when navigating to a policy page.
+
+The web response checked for this site included Cloudflare delivery-layer headers, but that alone does not identify the origin hosting provider, access-log retention, or account-level analytics settings. [Cloudflare's cookie documentation](https://developers.cloudflare.com/fundamentals/reference/policies-compliances/cloudflare-cookies/) describes cookies used by some features; the cookies that apply depend on enabled services and configuration. The site's account settings and applicable cookie list have not been verified, so we do not claim that any specific Cloudflare cookie is in use. Hosting access logs and their retention also require confirmation.
+
+The current build generates service-worker and Workbox cache-list files, but I could not find an automatic registration reference in the generated pages. This does not establish that every visitor's browser has a registered service worker or an installed PWA. A service worker registered by an earlier deployment or the browser's own cache may remain on some devices. Browser site-data controls can clear local preferences and cache, with details varying by browser.
+
+The operator still needs to confirm hosting, access logs, cookies, the email-provider account settings, and the starting point for the six-month retention limit. **Until these items are confirmed, this document is not a final policy for publication or Store submission.** If app features or data practices change, this policy and the Store disclosures will be updated.

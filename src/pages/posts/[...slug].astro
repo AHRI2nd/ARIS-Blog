@@ -14,6 +14,7 @@ import ImageWrapper from "../../components/misc/ImageWrapper.astro";
 import PostMetadata from "../../components/PostMeta.astro";
 import { profileConfig, siteConfig } from "../../config";
 import { formatDateToYYYYMMDD } from "../../utils/date-utils";
+import { isLyricalSyncPrivacySlug } from "@utils/giscus-privacy.js";
 
 export async function getStaticPaths() {
 	// Listed posts have prev/next navigation set; others are appended without it
@@ -28,6 +29,7 @@ export async function getStaticPaths() {
 }
 
 const { entry } = Astro.props;
+const isLyricalSyncPrivacyPolicy = isLyricalSyncPrivacySlug(entry.slug);
 const { Content, headings } = await entry.render();
 
 const { remarkPluginFrontmatter } = await entry.render();
@@ -113,7 +115,7 @@ const jsonLd = {
 
             {licenseConfig.enable && <License title={entry.data.title} slug={entry.slug} pubDate={entry.data.published} class="mb-6 rounded-xl license-container onload-animation"></License>}
 
-            {giscusConfig.enable && <GiscusComment client:load />}
+            {giscusConfig.enable && !isLyricalSyncPrivacyPolicy && <GiscusComment client:load />}
 
         </div>
     </div>

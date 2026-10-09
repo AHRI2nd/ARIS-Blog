@@ -1,9 +1,29 @@
 <script lang="ts">
 import { giscusConfig } from "src/config";
+import { installGiscusPrivacyCleanup } from "@utils/giscus-privacy.js";
 import { onDestroy, onMount } from "svelte";
 
 let container: HTMLDivElement;
 let observer: MutationObserver;
+let script: HTMLScriptElement | undefined;
+let unregisterPrivacyCleanup: (() => void) | undefined;
+
+function registerPrivacyCleanup() {
+	if (unregisterPrivacyCleanup) return;
+	const swup = (window as unknown as {
+		swup?: {
+			hooks?: {
+				on: (
+					name: "visit:start",
+					handler: (visit: { to: { url: string } }) => void,
+				) => () => void;
+			};
+		}
+	}).swup;
+	if (swup?.hooks) {
+		unregisterPrivacyCleanup = installGiscusPrivacyCleanup(swup, document);
+	}
+}
 
 function getTheme(): string {
 	const isDark = document.documentElement.classList.contains("dark");
@@ -23,7 +43,7 @@ function sendThemeMessage(theme: string) {
 }
 
 onMount(() => {
-	const script = document.createElement("script");
+	script = document.createElement("script");
 	script.src = "https://giscus.app/client.js";
 	script.setAttribute("data-repo", giscusConfig.repo);
 	script.setAttribute("data-repo-id", giscusConfig.repoId);
@@ -52,10 +72,18 @@ onMount(() => {
 		attributes: true,
 		attributeFilter: ["class"],
 	});
+
+	registerPrivacyCleanup();
+	document.addEventListener("swup:enable", registerPrivacyCleanup);
 });
 
 onDestroy(() => {
 	observer?.disconnect();
+	if (typeof document === "undefined") return;
+	document.removeEventListener("swup:enable", registerPrivacyCleanup);
+	unregisterPrivacyCleanup?.();
+	script?.remove();
+	container?.querySelectorAll("iframe.giscus-frame, script[src*='giscus.app']").forEach((element) => element.remove());
 });
 </script>
 
