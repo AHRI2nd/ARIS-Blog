@@ -29,11 +29,19 @@ The app processes audio and track information you select, along with lyrics, tra
 
 ## Information stored on your device
 
-The app stores preferences, shortcuts, and up to eight recent-file entries on your device. Each entry may include lyrics and audio file paths, opening times, and macOS file-access bookmarks. Recovery copies of unsaved work may contain lyrics, track information, timestamps, file paths, and access bookmarks.
+The app stores preferences, shortcuts, and up to eight recent-file entries on your device. Each entry may include lyrics and audio file paths, opening times, and macOS file-access bookmarks. Recovery copies of unsaved work may contain lyrics, track information, timestamps, file paths, and access bookmarks. Saving recovery copies is separate from automatic saving to the original file and is on by default.
 
 ## Retention, deletion, and your controls
 
-You can clear recent entries from the recent files menu. A recovery copy is removed when the latest changes have been saved and no unsaved changes remain, or when you choose to discard it at the startup recovery prompt. Changes made during a save may remain in recovery storage. A storage error may prevent deletion, so check the app's notice. Preferences have no fixed automatic expiry. Deleting recent entries or recovery copies does not delete original files. You manage and delete files you save or export.
+After you confirm that you want to turn off recovery-copy saving, the app deletes existing recovery copies and stops creating new ones. This setting is separate from automatic saving to the original file.
+
+When recovery-copy saving is on, a session's recovery copy is removed once its latest changes are saved and no unsaved changes remain. Choosing to discard a copy at the startup recovery prompt also removes that copy.
+
+Clear local data removes the recent-file list, saved security-scoped access bookmarks, and recovery copies, and resets settings such as the UI and shortcuts. Recovery-copy saving and original-file auto-save remain off. A minimal setting remains to remember these two choices.
+
+This action does not delete the original lyrics or audio files or your current editing content. References and access information for an open document remain in memory until you close it. Opening files or changing settings later may create related local records again.
+
+If a storage error prevents some data from being deleted or a setting from being saved, the app reports the error and offers a retry. These controls do not guarantee deletion of WebKit or operating-system caches or provider backups. You manage and delete files you save or export.
 
 ## External sharing and protection
 
@@ -41,9 +49,11 @@ The app itself does not upload or share local lyrics, audio, or editing data wit
 
 ## Inquiries and email handling
 
-Send privacy inquiries to [tsukimori@ahri2nd.xyz](mailto:tsukimori@ahri2nd.xyz). The operator reviews the email address, message, and attachments you provide to respond and resolve the issue. You do not need to send sensitive files. Email service providers may separately process information while transmitting or storing it.
+Send privacy inquiries to [tsukimori@ahri2nd.xyz](mailto:tsukimori@ahri2nd.xyz). Inquiries are received in the operator's Google Workspace mailbox, which only the operator reviews. Resend is used only to deliver email sent by the operator.
 
-Inquiry messages and attachments are deleted within six months of receipt. No separate copies are retained. To request deletion of inquiry materials, email the address above.
+Inquiry messages and attachments are deleted within six months of initial receipt. The operator manually deletes the messages and attachments from the managed mailbox and empties its Trash. No separate copies are retained.
+
+You may email the address above to access or correct your app-related personal information, request its deletion, or ask that its processing be restricted. The operator will review the request and reply with how it will be handled and the result.
 
 ## Changes and contact
 
