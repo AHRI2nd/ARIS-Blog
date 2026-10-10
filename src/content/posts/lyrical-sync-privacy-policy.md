@@ -47,7 +47,7 @@ lang: ko
 
 앱 자체 기능은 원본 가사·오디오 파일을 개발자 서버에 업로드하지 않으며, 자체 사용 분석이나 원격 오류 수집 기능이 없습니다. 사용자가 클라우드 동기화 폴더를 선택하면 별도 동기화 서비스가 자체 설정에 따라 파일을 처리할 수 있습니다.
 
-Windows Store edition에는 Microsoft WebView2 Runtime이 포함됩니다. Windows 진단 설정에 따라 선택 진단 데이터가 처리될 수 있으며, 필수 진단 데이터는 해당 설정과 관계없이 수집될 수 있습니다. Microsoft Defender SmartScreen은 기본적으로 켜져 있고 정보를 Microsoft에 전송합니다. WebView2 프로세스가 충돌하면 진단용 미니덤프가 생성되어 Microsoft에 전송됩니다. 자세한 내용은 [Microsoft 개인정보처리방침](https://privacy.microsoft.com/en-us/privacystatement)과 [WebView2 데이터 및 개인정보 문서](https://learn.microsoft.com/en-us/microsoft-edge/webview2/concepts/data-privacy)를 확인하세요. 이 안내는 Windows edition에만 적용되며 macOS edition은 WKWebView를 사용합니다.
+Windows Store edition에는 Microsoft WebView2 Runtime이 포함됩니다. Windows 진단 설정에 따라 선택 진단 데이터가 처리될 수 있으며, 필수 진단 데이터는 해당 설정과 관계없이 수집될 수 있습니다. 앱의 Windows 설정은 Microsoft Defender SmartScreen을 활성화하며, SmartScreen은 사용자 정보를 Microsoft에 수집·전송합니다. WebView2 프로세스가 충돌하면 진단용 미니덤프가 생성되어 Microsoft에 전송됩니다. 이러한 WebView2 런타임 진단 및 충돌 보고는 Microsoft에 전달되며 앱 게시자에게 전달되지 않습니다. 자세한 내용은 [Microsoft 개인정보처리방침](https://privacy.microsoft.com/en-us/privacystatement)과 [WebView2 데이터 및 개인정보 문서](https://learn.microsoft.com/en-us/microsoft-edge/webview2/concepts/data-privacy)를 확인하세요. 이 안내는 Windows edition에만 적용되며 macOS edition은 WKWebView를 사용합니다.
 
 앱 자체 암호화 기능은 제공하지 않으며, 로컬 자료의 접근 보호는 운영체제의 계정 및 파일 보호에 의존합니다.
 

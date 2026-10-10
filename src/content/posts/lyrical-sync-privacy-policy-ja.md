@@ -47,7 +47,7 @@ lang: ja
 
 アプリ自体の機能として、元の歌詞・音声ファイルを開発者のサーバーへアップロードすることはなく、利用分析や遠隔エラー収集機能もありません。ユーザーがクラウド同期フォルダーを選択した場合、別の同期サービスが独自の設定に従ってファイルを取り扱うことがあります。
 
-Windows Store editionにはMicrosoft WebView2 Runtimeが含まれます。選択診断データはWindowsの診断データ設定に従って処理されますが、必須診断データは設定にかかわらず収集される場合があります。Microsoft Defender SmartScreenは初期設定で有効で、情報をMicrosoftへ送信します。WebView2プロセスがクラッシュすると、診断用ミニダンプが作成されMicrosoftへ送信されます。詳細は[Microsoftプライバシー ステートメント](https://privacy.microsoft.com/en-us/privacystatement)および[WebView2のデータとプライバシーに関する説明](https://learn.microsoft.com/en-us/microsoft-edge/webview2/concepts/data-privacy)をご確認ください。この案内はWindows版のみに適用され、macOS版はWKWebViewを使用します。
+Windows Store editionにはMicrosoft WebView2 Runtimeが含まれます。選択診断データはWindowsの診断データ設定に従って処理されますが、必須診断データは設定にかかわらず収集される場合があります。アプリのWindows設定ではMicrosoft Defender SmartScreenを有効にしており、SmartScreenはユーザー情報を収集してMicrosoftへ送信します。WebView2プロセスがクラッシュすると、診断用ミニダンプが作成されMicrosoftへ送信されます。これらのWebView2ランタイム診断・クラッシュ報告はMicrosoftに送られ、アプリの発行者には送られません。詳細は[Microsoftプライバシー ステートメント](https://privacy.microsoft.com/en-us/privacystatement)および[WebView2のデータとプライバシーに関する説明](https://learn.microsoft.com/en-us/microsoft-edge/webview2/concepts/data-privacy)をご確認ください。この案内はWindows版のみに適用され、macOS版はWKWebViewを使用します。
 
 アプリ独自の暗号化機能はなく、端末内データへのアクセス保護はOSのアカウントとファイル保護に依存します。
 
