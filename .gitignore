@@ -24,3 +24,6 @@ pnpm-debug.log*
 
 # local backups
 .backups/
+
+# internal privacy review notes
+docs/privacy/lyrical-sync-inquiry-operations-review.md
